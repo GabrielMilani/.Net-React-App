@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProActivity.Application\ProActivity.Application.csproj" />
+    <ProjectReference Include="..\ProActivity.Domain\ProActivity.Domain.csproj" />
+    <ProjectReference Include="..\ProActivity.Infra\ProActivity.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
