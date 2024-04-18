@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import TitlePage from '../../components/TitlePage'
 import {Button, FormControl, InputGroup } from 'react-bootstrap'
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import { useNavigate } from 'react-router-dom';
 
 
 const clients =[
@@ -43,7 +43,7 @@ const clients =[
 ]
 
 export default function ClientList() {
-   const history = useHistory();
+   const navigate = useNavigate();
    const [termSearsh, setTermSearsh] = useState('');
    
    const handleInputChange = (e) => {
@@ -56,7 +56,7 @@ export default function ClientList() {
    });
 
    const newClient = () => {
-      history.push('/client/detail');
+      navigate('/client/detail');
    }
 
    return (
@@ -97,7 +97,7 @@ export default function ClientList() {
                   <td>
                      <div>
                         <button className="btn btn-sm btn-outline-primary me-2" 
-                                onClick={() => history.push(`/client/detail/${client.id}`)}>
+                                onClick={() => navigate(`/client/detail/${client.id}`)}>
                            <i className='fas fa-user-edit me-2'></i>
                            Edit
                         </button>
